@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Games";
+}
+
+<table border="1">
+@foreach (var game in Model.Games)
+{
+    <tr>
+        <td>
+            <h2>@game.Title</h2>
+        </td>
+        <td width="100" align="center">
+                @game.Price $
+        </td>
+        <td>
+            <a asp-page="./Details" asp-route-id="@game.Id" class="btn-link">подробнее</a>
+        </td>
+        <td>
+            <form method="post">
+                <button type="submit" asp-page-handler="delete" asp-route-id="@game.Id" class="btn">УДАЛИТЬ</button>
+            </form>
+        </td>
+    </tr>
+}
+</table>

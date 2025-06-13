@@ -1,0 +1,57 @@
+﻿@page
+@model WebApp.Pages.DetailsModel
+@{
+<h1>Details</h1>
+
+<form method="post">
+<table>
+    <tr>
+        <td>
+            ID
+        </td>
+        <td>
+            <label asp-for="Game.Id" />
+            <input asp-for="Game.Id" readonly/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Title
+        </td>
+        <td>
+            <label asp-for="Game.Title"/>
+            <input asp-for="Game.Title" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Description
+        </td>
+        <td>
+            <label asp-for="Game.Description"/>
+            <input asp-for="Game.Description" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            PublicationYear
+        </td>
+        <td>
+            <label asp-for="Game.PublicationYear" />
+            <input asp-for="Game.PublicationYear" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Price
+        </td>
+        <td>
+            <label asp-for="Game.Price"/>
+            <input asp-for="Game.Price" />
+        </td>
+    </tr>
+</table>
+	<button type="submit" class="btn">сохранить</button>
+
+</form>
+}
