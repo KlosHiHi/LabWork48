@@ -30,6 +30,5 @@ namespace WebApiServices
             var response = await _client.DeleteAsync($"Games/{id}");
             response.EnsureSuccessStatusCode();
         }
-
     }
 }

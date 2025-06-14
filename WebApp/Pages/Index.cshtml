@@ -14,12 +14,12 @@
         <td width="100" align="center">
                 @game.Price $
         </td>
-        <td>
-            <a asp-page="./Details" asp-route-id="@game.Id" class="btn-link">подробнее</a>
+        <td width="400" align="right">
+            <button class="btn-primary"><a asp-page="./Details" asp-route-id="@game.Id" class="btn-primary">подробнее</a></button>
         </td>
         <td>
             <form method="post">
-                <button type="submit" asp-page-handler="delete" asp-route-id="@game.Id" class="btn">УДАЛИТЬ</button>
+                <button type="submit" asp-route-id="@game.Id" class="btn-primary">удалить</button>
             </form>
         </td>
     </tr>

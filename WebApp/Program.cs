@@ -7,12 +7,10 @@ builder.Services.AddRazorPages();
 
 var client = new HttpClient()
 {
-    //BaseAddress = new Uri("http://localhost:5185/api/")
     BaseAddress = new Uri("http://localhost:5042/api/")
 };
 
 builder.Services.AddSingleton<GamesApiService>(new GamesApiService(client));
-
 
 var app = builder.Build();
 

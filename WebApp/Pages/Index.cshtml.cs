@@ -16,7 +16,7 @@ namespace WebApp.Pages
             Games = await _service.GetGamesAsync();
         }
 
-        public async Task<IActionResult> OnPostDeleteAsync(int id)
+        public async Task<IActionResult> OnPostAsync(int id)
         {
             try
             {
